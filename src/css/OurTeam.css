@@ -1,0 +1,38 @@
+.our-team .card {
+	background-color: transparent;
+	box-shadow: 0px 0px 18px 4px #00000024;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
+}
+.our-team .card .lower {
+	width: 90%;
+	align-self: center;
+}
+.our-team .card .img {
+	overflow: hidden;
+}
+.our-team .card .bio h2.dark {
+	color: white;
+}
+.our-team .card .bio h2.light {
+	color: #3c3c3c;
+}
+.our-team .card .bio {
+}
+.our-team .card .skills-container .skill {
+	background-color: var(--primary-color);
+	border-radius: 6px;
+	padding: 3px 5px;
+	margin: 3px;
+	font-size: 13px;
+	font-weight: bold;
+}
+.our-team .card .skills-container .skill.dark {
+	color: white;
+}
+.our-team .card .skills-container .skill.light {
+	color: #2b2b2b;
+}

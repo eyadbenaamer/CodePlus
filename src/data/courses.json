@@ -1,0 +1,77 @@
+[
+	{
+		"title": "python I",
+		"language": "python",
+		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"startsIn": {
+			"day": "2",
+			"month": "feb",
+			"year": "2023"
+		},
+		"endsIn": {
+			"day": "2",
+			"month": "mar",
+			"year": "2023"
+		}
+	},
+	{
+		"title": "python I",
+		"language": "python",
+		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"startsIn": {
+			"day": "2",
+			"month": "feb",
+			"year": "2023"
+		},
+		"endsIn": {
+			"day": "2",
+			"month": "mar",
+			"year": "2023"
+		}
+	},
+	{
+		"title": "react JS",
+		"language": "JS",
+		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"startsIn": {
+			"day": "2",
+			"month": "feb",
+			"year": "2023"
+		},
+		"endsIn": {
+			"day": "2",
+			"month": "mar",
+			"year": "2023"
+		}
+	},
+	{
+		"title": "python II",
+		"language": "python",
+		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"startsIn": {
+			"day": "2",
+			"month": "feb",
+			"year": "2023"
+		},
+		"endsIn": {
+			"day": "2",
+			"month": "mar",
+			"year": "2023"
+		}
+	},
+	{
+		"title": "flutter",
+		"language": "dart",
+		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"startsIn": {
+			"day": "2",
+			"month": "feb",
+			"year": "2023"
+		},
+		"endsIn": {
+			"day": "2",
+			"month": "mar",
+			"year": "2023"
+		}
+	}
+]

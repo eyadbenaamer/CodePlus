@@ -10,7 +10,7 @@ export const Courses = () => {
 			let response = await axios(url);
 			setCourses(response.data);
 		};
-		fetchCourses("http://192.168.1.103:5500/src/data/courses.json");
+		fetchCourses("http://localhost:5500/src/data/courses.json");
 	}, []);
 	const context = useContext(Global);
 	const english = context.language === "english";

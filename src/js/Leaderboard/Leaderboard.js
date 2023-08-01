@@ -23,9 +23,7 @@ const Leaderboard = () => {
     setList(response.data.entries);
   };
   const fetchCount = async () => {
-    let response = await axios.get(
-      "http://localhost:5500/src/data/count.json"
-    );
+    let response = await axios.get("http://localhost:5500/src/data/count.json");
     setPagesCount(response.data.pagesCount);
   };
   useEffect(() => {
@@ -49,8 +47,9 @@ const Leaderboard = () => {
           {english ? "Leaderboard" : arabic ? "لوحة الصّدارة" : ""}
         </h1>
         <div
-          className={`items d-flex col-11 col-md-6 col-lg-6 flex-column align-items-center gap-4 ${context.theme === "dark" ? "text-light" : "text-dark"
-            }`}
+          className={`items d-flex col-11 col-md-6 col-lg-6 flex-column align-items-center gap-4 ${
+            context.theme === "dark" ? "text-light" : "text-dark"
+          }`}
         >
           <div className={`search my-5 w-100 ${context.theme}`}>
             <input
@@ -88,14 +87,17 @@ const Leaderboard = () => {
           })}
         </div>
         <ReactPaginate
-          containerClassName={`pagination flex-wrap ${context.theme === "dark" ? "text-light" : "text-dark"
-            } justify-content-center align-items-center my-5`}
+          containerClassName={`pagination flex-wrap ${
+            context.theme === "dark" ? "text-light" : "text-dark"
+          } justify-content-center align-items-center my-5`}
           pageClassName="page P-2"
-          pageLinkClassName={`link px-2 ${context.theme === "dark" ? "text-light" : "text-dark"
-            } ${context.theme}`}
+          pageLinkClassName={`link px-2 ${
+            context.theme === "dark" ? "text-light" : "text-dark"
+          } ${context.theme}`}
           breakClassName="page p-2"
-          breakLinkClassName={`link px-2 ${context.theme === "dark" ? "text-light" : "text-dark"
-            } ${context.theme}`}
+          breakLinkClassName={`link px-2 ${
+            context.theme === "dark" ? "text-light" : "text-dark"
+          } ${context.theme}`}
           nextClassName="page"
           nextLinkClassName="link"
           previousClassName="page"
@@ -124,7 +126,6 @@ const Leaderboard = () => {
           }
           renderOnZeroPageCount={null}
         />
-
       </div>
     </div>
   );

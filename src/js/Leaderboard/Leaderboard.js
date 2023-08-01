@@ -9,6 +9,7 @@ import "../../css/LeaderBoard.css";
 const Leaderboard = () => {
   let [pagesCount, setPagesCount] = useState(0);
   let [list, setList] = useState([]);
+  console.log(list.length)
   const fetchList = async (pageCount) => {
     let response = await axios.get(
       `http://localhost:5500/src/data/leaderboard${pageCount}.json`
@@ -16,9 +17,11 @@ const Leaderboard = () => {
     setList(response.data);
   };
   const search = async (query) => {
-    let response = await axios.post(
-      `http://localhost:5500/src/data/leaderboard?q=${query}`
-    );
+    let response = await axios.get(
+      // `http://localhost:5500/src/data/leaderboard?q=${query}`
+      `http://localhost:5500/src/data/results.json`
+
+      ) ;
     setPagesCount(response.data.count);
     setList(response.data.entries);
   };
@@ -73,7 +76,7 @@ const Leaderboard = () => {
             />
           </div>
           <Top />
-          {list.map((item) => {
+          {list.length>0&&list.map((item) => {
             return (
               <Item
                 id={item.id}
@@ -103,7 +106,7 @@ const Leaderboard = () => {
           previousClassName="page"
           previousLinkClassName="link"
           activeClassName="active"
-          marginPagesDisplayed={2}
+          marginPagesDisplayed={3}
           breakLabel="..."
           nextLabel={
             <div className="next d-flex align-items-center gap-1">

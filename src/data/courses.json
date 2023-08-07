@@ -2,7 +2,7 @@
 	{
 		"title": "python I",
 		"language": "python",
-		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"image": "https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/imgs/python.jpg",
 		"startsIn": {
 			"day": "2",
 			"month": "feb",
@@ -17,7 +17,7 @@
 	{
 		"title": "python I",
 		"language": "python",
-		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"image": "https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/imgs/python.jpg",
 		"startsIn": {
 			"day": "2",
 			"month": "feb",
@@ -32,7 +32,7 @@
 	{
 		"title": "react JS",
 		"language": "JS",
-		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"image": "https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/imgs/python.jpg",
 		"startsIn": {
 			"day": "2",
 			"month": "feb",
@@ -47,7 +47,7 @@
 	{
 		"title": "python II",
 		"language": "python",
-		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"image": "https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/imgs/python.jpg",
 		"startsIn": {
 			"day": "2",
 			"month": "feb",
@@ -62,7 +62,7 @@
 	{
 		"title": "flutter",
 		"language": "dart",
-		"image": "http://127.0.0.1:5500/src/data/imgs/python.jpg",
+		"image": "https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/imgs/python.jpg",
 		"startsIn": {
 			"day": "2",
 			"month": "feb",

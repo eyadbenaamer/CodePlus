@@ -1,6 +1,5 @@
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
-// import {  useParams } from "react-router-dom";
 import axios from "axios";
 import { Global } from "../GlobalSettings";
 import geek from "../../imgs/geek.png";
@@ -14,12 +13,10 @@ const ItemDetails = () => {
   const context = useContext(Global);
   const english = context.language === "english";
   const arabic = context.language === "arabic";
-  // const param = useParams();
   let [item, setItem] = useState({ trophies: [] });
   const fetchItemById = async () => {
     let response = await axios(
       `https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/leaderboard3.json`
-      // `http://localhost:5500/src/data/leaderboard?id=${param.id}` example
     );
     setItem(response.data);
   };

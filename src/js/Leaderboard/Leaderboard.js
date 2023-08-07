@@ -17,7 +17,7 @@ const Leaderboard = () => {
   };
   const search = async (query) => {
     let response = await axios.get(
-      // `http://localhost:5500/src/data/leaderboard?q=${query}`
+      // `http://localhost:5500/src/data/leaderboard?q=${query}`// for an API in the future
       `https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/results.json`
     );
     setPagesCount(response.data.count);

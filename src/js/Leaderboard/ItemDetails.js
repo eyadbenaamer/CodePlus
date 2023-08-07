@@ -18,7 +18,7 @@ const ItemDetails = () => {
   let [item, setItem] = useState({ trophies: [] });
   const fetchItemById = async () => {
     let response = await axios(
-      `http://localhost:5500/src/data/leaderboard3.json`
+      `https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/leaderboard3.json`
       // `http://localhost:5500/src/data/leaderboard?id=${param.id}` example
     );
     setItem(response.data);

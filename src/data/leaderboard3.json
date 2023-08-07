@@ -1,7 +1,7 @@
 {
 	"id": 7,
 	"rank": 7,
-	"image": "http://127.0.0.1:5500/src/data/imgs/avatar-06.png",
+	"image": "https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/imgs/avatar-06.png",
 	"name": "eyad",
 	"points": 10,
 	"trophies": ["geek", "passionate", "hacker", "perfect"]

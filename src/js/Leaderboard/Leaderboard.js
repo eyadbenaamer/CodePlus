@@ -11,20 +11,22 @@ const Leaderboard = () => {
   let [list, setList] = useState([]);
   const fetchList = async (pageCount) => {
     let response = await axios.get(
-      `http://localhost:5500/src/data/leaderboard${pageCount}.json`
+      `https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/leaderboard${pageCount}.json`
     );
     setList(response.data);
   };
   const search = async (query) => {
     let response = await axios.get(
       // `http://localhost:5500/src/data/leaderboard?q=${query}`
-      `http://localhost:5500/src/data/results.json`
+      `https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/results.json`
     );
     setPagesCount(response.data.count);
     setList(response.data.entries);
   };
   const fetchCount = async () => {
-    let response = await axios.get("http://localhost:5500/src/data/count.json");
+    let response = await axios.get(
+      "https://raw.githubusercontent.com/eyadbinamir/CodePlus/master/src/data/count.json"
+    );
     setPagesCount(response.data.pagesCount);
   };
   useEffect(() => {

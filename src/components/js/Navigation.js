@@ -9,24 +9,28 @@ import logoAlt from "../../imgs/logo-alt.svg";
 import "../css/Navigation.css";
 const Navigation = () => {
   const context = useContext(Global);
-  const english = context.language === "english";
-  const arabic = context.language === "arabic";
+  const {
+    theme,
+    isMenuClicked,
+    setIsMenuClicked,
+    language,
+    windowWidth,
+  } = context;
+  const english = language === "english";
+  const arabic = language === "arabic";
   return (
-    <nav
-      dir={english ? "ltr" : arabic ? "rtl" : ""}
-      className={`${context.theme}`}
-    >
+    <nav dir={english ? "ltr" : arabic ? "rtl" : ""} className={`${theme}`}>
       <div className="container d-flex justify-content-around gap-2 py-2 position-relative align-items-center">
         <div
           className={`d-flex justify-content-between align-items-center gap-3 gap-lg-5 ${
-            context.theme === "light" ? "text-dark" : "text-light"
+            theme === "light" ? "text-dark" : "text-light"
           }`}
         >
           <div>
             <Link onClick={() => window.scrollTo({ top: 0 })} to="/">
               <img
                 className="logo"
-                src={context.theme === "dark" ? logoAlt : logo}
+                src={theme === "dark" ? logoAlt : logo}
                 alt="Code+"
               />
             </Link>
@@ -79,27 +83,21 @@ const Navigation = () => {
           </div>
           <a
             href="#contact-us"
-            className={`contact d-none d-lg-flex align-items-center ${context.theme}`}
+            className={`contact d-none d-lg-flex align-items-center ${theme}`}
           >
             {english ? "Contact Us!" : arabic ? "تواصل معنا!" : ""}
           </a>
         </div>
         <div
-          onClick={() =>
-            context.isMenuClicked
-              ? context.setIsMenuClicked(false)
-              : context.setIsMenuClicked(true)
-          }
-          className={"button d-flex d-lg-none me-2 m-md-0 " + context.theme}
+          onClick={() => setIsMenuClicked(!isMenuClicked)}
+          className={"button d-flex d-lg-none me-2 m-md-0 " + theme}
         >
           <FontAwesomeIcon icon="fa-solid fa-bars"></FontAwesomeIcon>
         </div>
       </div>
-      {context.isMenuClicked && context.windowWidth < 1024 && (
-        <div className={`menu ${context.theme}`}>
-          <div
-            className={context.theme === "light" ? "text-dark" : "text-light"}
-          >
+      {isMenuClicked && windowWidth < 1024 && (
+        <div className={`menu ${theme}`}>
+          <div className={theme === "light" ? "text-dark" : "text-light"}>
             <div className="container">
               <div className="d-flex justify-content-between ms-3 gap-4">
                 <ul
@@ -109,7 +107,7 @@ const Navigation = () => {
                       element.target.id !== "contact-us"
                     ) {
                       window.scrollTo({ top: 0 });
-                      context.setIsMenuClicked(false);
+                      setIsMenuClicked(false);
                     }
                   }}
                   className="Links d-flex flex-column m-0 align-items-center justify-content-between gap-2 "
@@ -146,8 +144,8 @@ const Navigation = () => {
                   </li>
                   <a
                     href="#contact-us"
-                    onClick={() => context.setIsMenuClicked(false)}
-                    className={"contact align-items-center " + context.theme}
+                    onClick={() => setIsMenuClicked(false)}
+                    className={"contact align-items-center " + theme}
                   >
                     {english ? "Contact Us!" : arabic ? "تواصل معنا!" : ""}
                   </a>
